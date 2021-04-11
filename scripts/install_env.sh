@@ -4,17 +4,13 @@
 ##   SETUP OF PIPELINE FOLDER AND YML CONDA   ##
 ################################################
 
-#create folder for Pipeline
-mkdir ./Pipeline_Virus_Assembly_V0
-cd ./Pipeline_Virus_Assembly_V0
-
 #create .yml with all tools
 
 echo ""
 echo "Install environment.."
 echo ""
 
-echo "name: Pipeline_V0
+echo "name: virus_assembly
 channels:
 - defaults
 - bioconda
@@ -32,7 +28,7 @@ dependencies:
 - blast=2.7.1
 - git=2.23.0
 - cutadapt=1.18
-" > ./Pipeline_Virus_Assembly_V0.yml
+" > ./virus_assembly.yml
 
 ################################################
 ##   MAKE ENVIRONMENT                         ##
@@ -40,6 +36,24 @@ dependencies:
 
 # make new environment
 
-conda env create -f ./Pipeline_Virus_Assembly_V0.yml
+conda env create -f ./virus_assembly.yml
 
-rm Pipeline_Virus_Assembly_V0.yml
+rm ./virus_assembly.yml
+
+# Download github 
+
+git clone \
+  https://raw.githubusercontent.com/jsede/virus_assembly.git \
+  $CONDA_PREFIX/virus_assembly
+
+
+  # Create links to pipeline
+  
+find \
+  $CONDA_PREFIX/virus_assembly/ \
+  -name "*.sh" \
+  -exec chmod +x {} \;
+  
+ln -s \
+  $CONDA_PREFIX/virus_assembly/virus_assembly.sh \
+  $CONDA_PREFIX/bin/virus_assembly
