@@ -11,7 +11,7 @@ with:
     -v  Version of the pipeline
     -n  Name of RUN.
     -i  Input directory
-    -s  Viral species [HIV, RRV, HMPV]
+    -s  Viral species [HIV, RRV, RSV, HMPV]
     -c  Perform clipping of primers
     -q  Perform quality check using fastQC
     -m  Memory
