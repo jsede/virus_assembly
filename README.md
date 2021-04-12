@@ -23,22 +23,22 @@ A conda package manager like [Miniconda3](https://docs.conda.io/en/latest/minico
    bash ./install_env.sh
    ```
 3. Check if installation worked
-   ```
+  ```
    conda activate virus_assembly
-   ```
+  ```
  ## Usage
    ```
-   Pipeline: NGS pipeline for viral assembly.
-   usage: $(basename "$0" .sh) [-h -v -q -c] (-i dir -m value -t value )
-   (-s string) 
-   with:
-       -h  Show help text
-       -v  Version of the pipeline
-       -n  Name of RUN.
-       -i  Input directory
-       -s  Viral species
-       -q  Perform quality check using fastQC
-       -c  Perform clipping of primers 
-       -m  Memory
-       -t  Number of threads
+ Pipeline: NGS pipeline for viral assembly.
+usage: virus_assembly [-h -v -p -q] (-i dir -m value -t value )
+(-s string) 
+with:
+    -h  Show help text
+    -v  Version of the pipeline
+    -n  Name of RUN.
+    -i  Input directory
+    -s  Viral species
+    -c  Perform clipping of primers
+    -q  Perform quality check using fastQC
+    -m  Memory
+    -t  Number of threads
    ```
