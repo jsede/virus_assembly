@@ -167,7 +167,7 @@ sed '/^>/! s/\-//g' $IN_DIR/4_filter/"$VIRUS"_draft_genomes."$RUN".ref_aligned.f
 #retrieve draft denovo genomes
 seqtk subseq $IN_DIR/4_filter/"$VIRUS"_draft_genomes."$RUN".ref_unaligned.fa $IN_DIR/4_filter/"$VIRUS"_draft_genomes."$RUN".list > $IN_DIR/4_filter/"$VIRUS"_draft_genomes."$RUN".ref_unaligned.reoriented.fa
 
-#create folder for blasting
+#create folder for mapping
 mkdir $IN_DIR/5_remap
 
 #retrieve individual draft sequences for mapping
