@@ -147,7 +147,7 @@ cat $IN_DIR/3_contigs/megahit_*/*.contigs.megahit.hicov.fa > $IN_DIR/4_filter/al
 
 #blast to local database
 export BLASTDB=$db/blast
-blastn -query $IN_DIR/4_filter/all_denovo.contigs.megahit.hicov.fasta -db "$db"/blast/"$VIRUS"_refs -evalue 1E-10 -num_threads "$THREADS" -out $IN_DIR/4_filter/all_denovo.contigs.megahit.hicov.blastn_"$VIRUS".txt -outfmt "6 qseqid qlen stitle sstart send pident length evalue sstrand"
+blastn -query $IN_DIR/4_filter/all_denovo.contigs.megahit.hicov.fasta -db "$db"/blast/"$VIRUS"_refs -evalue 1E-10 -num_threads 1 -out $IN_DIR/4_filter/all_denovo.contigs.megahit.hicov.blastn_"$VIRUS".txt -outfmt "6 qseqid qlen stitle sstart send pident length evalue sstrand"
 
 #get top virus blast results for each contig
 awk -F$'\t' '!seen[$1]++' $IN_DIR/4_filter/all_denovo.contigs.megahit.hicov.blastn_"$VIRUS".txt > $IN_DIR/4_filter/all_denovo.contigs.megahit.hicov.blastn_"$VIRUS".top.txt
