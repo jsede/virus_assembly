@@ -1,6 +1,6 @@
 # virus_assembly
 
-A bash pipeline for easy assembly of viral genomes generated via Illumina NGS.
+A bash pipeline for de novo assembly of viral genomes generated via Illumina NGS. Currently handles the following viruses: HIV-1, RRV, HMPV.
 
 Current version: V1
 
