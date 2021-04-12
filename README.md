@@ -8,7 +8,7 @@ Current version: V1
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Included viral reference genomes] (#Included viral reference genomes)
+- [Included-viral-reference-genomes] (#Included-viral-reference-genomes)
 
 ## Requirements
 A conda package manager like [Miniconda3](https://docs.conda.io/en/latest/miniconda.html).
