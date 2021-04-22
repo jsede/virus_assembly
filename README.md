@@ -62,7 +62,7 @@ with:
       * 5_remap: Includes both a fasta file holding the viral contigs for that sample and a bam file of the trimmed reads agains those contigs. 
    ### Included viral reference genomes
   * **HIV**: K03455.1
-  * **RSV**:
-  * **RRV**:
-  * **HMPV**:
+  * **RSV**: MH760627; MH760652
+  * **RRV**: RRV_ref (Accession pending)
+  * **HMPV**: HMPV205; HMPV218 (Accessions pending)
 
